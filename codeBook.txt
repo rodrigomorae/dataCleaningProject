@@ -1,0 +1,165 @@
+The data set
+===============================
+
+Input dataset:
+
+The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
+
+Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals (tBodyAccJerk-XYZ and tBodyGyroJerk-XYZ). Also the magnitude of these three-dimensional signals were calculated using the Euclidean norm (tBodyAccMag, tGravityAccMag, tBodyAccJerkMag, tBodyGyroMag, tBodyGyroJerkMag). 
+
+Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing fBodyAcc-XYZ, fBodyAccJerk-XYZ, fBodyGyro-XYZ, fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag. (Note the 'f' to indicate frequency domain signals). 
+
+These signals were used to estimate variables of the feature vector for each pattern:  
+'-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
+
+tBodyAcc-XYZ
+tGravityAcc-XYZ
+tBodyAccJerk-XYZ
+tBodyGyro-XYZ
+tBodyGyroJerk-XYZ
+tBodyAccMag
+tGravityAccMag
+tBodyAccJerkMag
+tBodyGyroMag
+tBodyGyroJerkMag
+fBodyAcc-XYZ
+fBodyAccJerk-XYZ
+fBodyGyro-XYZ
+fBodyAccMag
+fBodyAccJerkMag
+fBodyGyroMag
+fBodyGyroJerkMag
+
+The set of variables that were estimated from these signals are: 
+
+mean(): Mean value
+std(): Standard deviation
+mad(): Median absolute deviation 
+max(): Largest value in array
+min(): Smallest value in array
+sma(): Signal magnitude area
+energy(): Energy measure. Sum of the squares divided by the number of values. 
+iqr(): Interquartile range 
+entropy(): Signal entropy
+arCoeff(): Autorregresion coefficients with Burg order equal to 4
+correlation(): correlation coefficient between two signals
+maxInds(): index of the frequency component with largest magnitude
+meanFreq(): Weighted average of the frequency components to obtain a mean frequency
+skewness(): skewness of the frequency domain signal 
+kurtosis(): kurtosis of the frequency domain signal 
+bandsEnergy(): Energy of a frequency interval within the 64 bins of the FFT of each window.
+angle(): Angle between to vectors.
+
+Additional vectors obtained by averaging the signals in a signal window sample. These are used on the angle() variable:
+
+gravityMean
+tBodyAccMean
+tBodyAccJerkMean
+tBodyGyroMean
+tBodyGyroJerkMean
+
+The complete list of variables of each feature vector is available in './/data//features.txt'
+
+Output dataset
+
+The output dataset are a dataset with the mean input variables about mean and std measures for (indexed) each Subject and each Activity. The output variable list is:
+"ActivityLabel"                                                                          
+"Subject"                                                                                
+"TimeOFreqeuncyOFreqeuncyOfBodyAccelerometerSignal-mean()-X"                             
+"TimeOFreqeuncyOFreqeuncyOfBodyAccelerometerSignal-mean()-Y"                             
+"TimeOFreqeuncyOFreqeuncyOfBodyAccelerometerSignal-mean()-Z"                             
+"TimeOFreqeuncyOFreqeuncyOfBodyAccelerometerSignal-std()-X"                              
+"TimeOFreqeuncyOFreqeuncyOfBodyAccelerometerSignal-std()-Y"                              
+"TimeOFreqeuncyOFreqeuncyOfBodyAccelerometerSignal-std()-Z"                              
+"TimeOfGravityAccelerometerSignal-mean()-X"                                              
+"TimeOfGravityAccelerometerSignal-mean()-Y"                                              
+"TimeOfGravityAccelerometerSignal-mean()-Z"                                              
+"TimeOfGravityAccelerometerSignal-std()-X"                                               
+"TimeOfGravityAccelerometerSignal-std()-Y"                                               
+"TimeOfGravityAccelerometerSignal-std()-Z"                                               
+"TimeOFreqeuncyOFreqeuncyOfBodyAccelerometerSignalWithJerkSignal-mean()-X"               
+"TimeOFreqeuncyOFreqeuncyOfBodyAccelerometerSignalWithJerkSignal-mean()-Y"               
+"TimeOFreqeuncyOFreqeuncyOfBodyAccelerometerSignalWithJerkSignal-mean()-Z"               
+"TimeOFreqeuncyOFreqeuncyOfBodyAccelerometerSignalWithJerkSignal-std()-X"                
+"TimeOFreqeuncyOFreqeuncyOfBodyAccelerometerSignalWithJerkSignal-std()-Y"                
+"TimeOFreqeuncyOFreqeuncyOfBodyAccelerometerSignalWithJerkSignal-std()-Z"                
+"TimeOFreqeuncyOFreqeuncyOfBodyGyroscopeSignal-mean()-X"                                 
+"TimeOFreqeuncyOFreqeuncyOfBodyGyroscopeSignal-mean()-Y"                                 
+"TimeOFreqeuncyOFreqeuncyOfBodyGyroscopeSignal-mean()-Z"                                 
+"TimeOFreqeuncyOFreqeuncyOfBodyGyroscopeSignal-std()-X"                                  
+"TimeOFreqeuncyOFreqeuncyOfBodyGyroscopeSignal-std()-Y"                                  
+"TimeOFreqeuncyOFreqeuncyOfBodyGyroscopeSignal-std()-Z"                                  
+"TimeOFreqeuncyOFreqeuncyOfBodyGyroscopeSignalWithJerkSignal-mean()-X"                   
+"TimeOFreqeuncyOFreqeuncyOfBodyGyroscopeSignalWithJerkSignal-mean()-Y"                   
+"TimeOFreqeuncyOFreqeuncyOfBodyGyroscopeSignalWithJerkSignal-mean()-Z"                   
+"TimeOFreqeuncyOFreqeuncyOfBodyGyroscopeSignalWithJerkSignal-std()-X"                    
+"TimeOFreqeuncyOFreqeuncyOfBodyGyroscopeSignalWithJerkSignal-std()-Y"                    
+"TimeOFreqeuncyOFreqeuncyOfBodyGyroscopeSignalWithJerkSignal-std()-Z"                    
+"TimeOFreqeuncyOFreqeuncyOfBodyAccelerometerSignalMagnitude-mean()"                      
+"TimeOFreqeuncyOFreqeuncyOfBodyAccelerometerSignalMagnitude-std()"                       
+"TimeOfGravityAccelerometerSignalMagnitude-mean()"                                       
+"TimeOfGravityAccelerometerSignalMagnitude-std()"                                        
+"TimeOFreqeuncyOFreqeuncyOfBodyAccelerometerSignalWithJerkSignalMagnitude-mean()"        
+"TimeOFreqeuncyOFreqeuncyOfBodyAccelerometerSignalWithJerkSignalMagnitude-std()"         
+"TimeOFreqeuncyOFreqeuncyOfBodyGyroscopeSignalMagnitude-mean()"                          
+"TimeOFreqeuncyOFreqeuncyOfBodyGyroscopeSignalMagnitude-std()"                           
+"TimeOFreqeuncyOFreqeuncyOfBodyGyroscopeSignalWithJerkSignalMagnitude-mean()"            
+"TimeOFreqeuncyOFreqeuncyOfBodyGyroscopeSignalWithJerkSignalMagnitude-std()"             
+"FreqeuncyOFreqeuncyOfBodyAccelerometerSignal-mean()-X"                                  
+"FreqeuncyOFreqeuncyOfBodyAccelerometerSignal-mean()-Y"                                  
+"FreqeuncyOFreqeuncyOfBodyAccelerometerSignal-mean()-Z"                                  
+"FreqeuncyOFreqeuncyOfBodyAccelerometerSignal-std()-X"                                   
+"FreqeuncyOFreqeuncyOfBodyAccelerometerSignal-std()-Y"                                   
+"FreqeuncyOFreqeuncyOfBodyAccelerometerSignal-std()-Z"                                   
+"FreqeuncyOFreqeuncyOfBodyAccelerometerSignal-meanFreq()-X"                              
+"FreqeuncyOFreqeuncyOfBodyAccelerometerSignal-meanFreq()-Y"                              
+"FreqeuncyOFreqeuncyOfBodyAccelerometerSignal-meanFreq()-Z"                              
+"FreqeuncyOFreqeuncyOfBodyAccelerometerSignalWithJerkSignal-mean()-X"                    
+"FreqeuncyOFreqeuncyOfBodyAccelerometerSignalWithJerkSignal-mean()-Y"                    
+"FreqeuncyOFreqeuncyOfBodyAccelerometerSignalWithJerkSignal-mean()-Z"                    
+"FreqeuncyOFreqeuncyOfBodyAccelerometerSignalWithJerkSignal-std()-X"                     
+"FreqeuncyOFreqeuncyOfBodyAccelerometerSignalWithJerkSignal-std()-Y"                     
+"FreqeuncyOFreqeuncyOfBodyAccelerometerSignalWithJerkSignal-std()-Z"                     
+"FreqeuncyOFreqeuncyOfBodyAccelerometerSignalWithJerkSignal-meanFreq()-X"                
+"FreqeuncyOFreqeuncyOfBodyAccelerometerSignalWithJerkSignal-meanFreq()-Y"                
+"FreqeuncyOFreqeuncyOfBodyAccelerometerSignalWithJerkSignal-meanFreq()-Z"                
+"FreqeuncyOFreqeuncyOfBodyGyroscopeSignal-mean()-X"                                      
+"FreqeuncyOFreqeuncyOfBodyGyroscopeSignal-mean()-Y"                                      
+"FreqeuncyOFreqeuncyOfBodyGyroscopeSignal-mean()-Z"                                      
+"FreqeuncyOFreqeuncyOfBodyGyroscopeSignal-std()-X"                                       
+"FreqeuncyOFreqeuncyOfBodyGyroscopeSignal-std()-Y"                                       
+"FreqeuncyOFreqeuncyOfBodyGyroscopeSignal-std()-Z"                                       
+"FreqeuncyOFreqeuncyOfBodyGyroscopeSignal-meanFreq()-X"                                  
+"FreqeuncyOFreqeuncyOfBodyGyroscopeSignal-meanFreq()-Y"                                  
+"FreqeuncyOFreqeuncyOfBodyGyroscopeSignal-meanFreq()-Z"                                  
+"FreqeuncyOFreqeuncyOfBodyAccelerometerSignalMagnitude-mean()"                           
+"FreqeuncyOFreqeuncyOfBodyAccelerometerSignalMagnitude-std()"                            
+"FreqeuncyOFreqeuncyOfBodyAccelerometerSignalMagnitude-meanFreq()"                       
+"FreqeuncyOFreqeuncyOfBodyBodyAccelerometerSignalWithJerkSignalMagnitude-mean()"         
+"FreqeuncyOFreqeuncyOfBodyBodyAccelerometerSignalWithJerkSignalMagnitude-std()"          
+"FreqeuncyOFreqeuncyOfBodyBodyAccelerometerSignalWithJerkSignalMagnitude-meanFreq()"     
+"FreqeuncyOFreqeuncyOfBodyBodyGyroscopeSignalMagnitude-mean()"                           
+"FreqeuncyOFreqeuncyOfBodyBodyGyroscopeSignalMagnitude-std()"                            
+"FreqeuncyOFreqeuncyOfBodyBodyGyroscopeSignalMagnitude-meanFreq()"                       
+"FreqeuncyOFreqeuncyOfBodyBodyGyroscopeSignalWithJerkSignalMagnitude-mean()"             
+"FreqeuncyOFreqeuncyOfBodyBodyGyroscopeSignalWithJerkSignalMagnitude-std()"              
+"FreqeuncyOFreqeuncyOfBodyBodyGyroscopeSignalWithJerkSignalMagnitude-meanFreq()"         
+"angle(TimeOFreqeuncyOFreqeuncyOfBodyAccelerometerSignalMean,gravity)"                   
+"angle(TimeOFreqeuncyOFreqeuncyOfBodyAccelerometerSignalWithJerkSignalMean),gravityMean)"
+"angle(TimeOFreqeuncyOFreqeuncyOfBodyGyroscopeSignalMean,gravityMean)"                   
+"angle(TimeOFreqeuncyOFreqeuncyOfBodyGyroscopeSignalWithJerkSignalMean,gravityMean)"     
+"angle(X,gravityMean)"                                                                   
+"angle(Y,gravityMean)"                                                                   
+"angle(Z,gravityMean)"       
+
+
+The choices
+===============================
+
+To do this, first the fragmented input dataset was unified in a Data Frame and then all the changes necessary about variables names and values was meke once above the unified data set.
+
+
+Experimental study
+===============================
+
+To do each step, the material of Data Getting and Cleaning Dataset course was consulted. In addition this, some commands and tips were searched in internet.
