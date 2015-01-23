@@ -11,7 +11,6 @@ names(x_train) <- features_name[,2]
 names(x_test) <- features_name[,2]
 
 ## Step1
-##library(plyr)
 fullDatasetTemp<-rbind(x_train,x_test)
 fullY<-rbind(y_train,y_test)
 fullSubject<-rbind(subject_train,subject_test)
