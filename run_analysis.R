@@ -11,7 +11,7 @@ names(x_train) <- features_name[,2]
 names(x_test) <- features_name[,2]
 
 ## Step1
-library(plyr)
+##library(plyr)
 fullDatasetTemp<-rbind(x_train,x_test)
 fullY<-rbind(y_train,y_test)
 fullSubject<-rbind(subject_train,subject_test)
@@ -40,4 +40,7 @@ names(meanStdData)<-sub('tGravity','TimeOfGravity',names(meanStdData))
 
 ## Step5
 library(dplyr)
-finalData<-aggregate(.~Activity+Subject,meanStdData,mean)
+finalData<-aggregate(.~ActivityLabel+Subject,meanStdData,mean)
+
+##optional to save the data in a txt file
+##write.table(finalData,file = "outputDataSet.txt",row.names = FALSE)
